@@ -1,0 +1,48 @@
+<div class="news-container">
+  <header class="showcase">
+    <div class="container">
+      <div class="text-content">
+        <p class="sports-category">Sports</p>
+        <h1>{{ header.title }}</h1>
+        <p>{{ header.description }}</p>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="articles">
+        <a *ngFor="let article of articles" [href]="article.cardLink" class="card">
+          <img [src]="article.imageUrl" [alt]="article.title" />
+          <article>
+            <p class="entertainment-category">Sports</p>
+            <h1>{{ article.title }}</h1>
+            <p>{{ article.description }}</p>
+          </article>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Popup container -->
+<!-- Popup container -->
+<div class="popup-container" [ngClass]="{ 'show-popup': showPopup }">
+  <div class="popup">
+    <span class="close-btn" (click)="closePopup()">x</span>
+    <div class="content-container" *ngIf="highestCountProduct">
+      <div class="content">
+        <h2>Most Popular Product</h2>
+        <img [src]="'http://localhost:3000' + highestCountProduct.imageUrl" [alt]="highestCountProduct.name" />
+        <h3>{{ highestCountProduct.name }}</h3>
+        <p>{{ highestCountProduct.description }}</p>
+        <p>Price: {{ highestCountProduct.price | currency }}</p>
+        <div class="allbutton3">
+          <button class="view-products-btn" (click)="goToproducts()">View Products</button>                        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

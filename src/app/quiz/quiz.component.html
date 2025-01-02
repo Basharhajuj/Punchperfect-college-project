@@ -1,0 +1,44 @@
+<p>quiz works!</p>
+<div class="popup-container" [ngClass]="{ 'show-popup': showPopup }">
+  <div class="popup" *ngIf="!quizCompleted">
+    <div class="gif-container">
+      <div class="introduction" *ngIf="currentStep === 0">
+        <h2>{{ introduction.title }}</h2>
+        <p>{{ introduction.description }}</p>
+      </div>
+
+      <div class="gif" *ngFor="let gif of gifs; let i = index" [style.display]="currentStep === i + 1 ? 'block' : 'none'">
+        <img [src]="gif.src" alt="GIF {{ i + 1 }}">
+        <div class="gif-question">
+          <h4>{{ gif.question }}</h4>
+          <div class="answers">
+            <button *ngFor="let option of gif.options" (click)="selectAnswer(option, gif.correctAnswer)">{{ option }}</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="question" *ngFor="let question of questions; let i = index" [style.display]="currentStep === i + 1 + gifs.length ? 'block' : 'none'">
+        <h4>{{ question.question }}</h4>
+        <div class="answers">
+          <button *ngFor="let option of question.options" (click)="selectAnswer(option, question.correctAnswer)">{{ option }}</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="btn">
+      <button *ngIf="currentStep > 0 && currentStep < totalQuestions" class="prev-btn" (click)="previousStep()">Previous</button>
+      <button *ngIf="currentStep < totalQuestions - 1" class="next-btn" (click)="nextStep()">{{ currentStep === 0 ? 'Start Quiz' : 'Next' }}</button>
+    </div>
+  </div>
+
+  <div class="popup" *ngIf="quizCompleted">
+    <div class="score">
+      <h3>Your Score: {{ score }} out of {{ totalQuestions }}</h3>
+      <div class="email-input">
+        <label for="email">Enter your email:</label>
+        <input type="email" id="email" [(ngModel)]="email" placeholder="Enter your email" required />
+      </div>
+      <button class="submit-btn" (click)="saveInfo()">Submit</button>
+    </div>
+  </div>
+</div>

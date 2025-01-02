@@ -1,0 +1,223 @@
+.login-background {
+    background-image: url("https://www.teahub.io/photos/full/64-641499_1920x1080-muhammad-ali-wallpapers-7-data-id-300663.jpg"); /* Update the path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  .login-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input-container {
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .input-container input {
+    padding: 10px 10px 10px 0;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+    width: 100%;
+  }
+  
+  .input-container label {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: white;
+    font-weight: bold;
+    pointer-events: none;
+  }
+  
+  .login-container button {
+    background: black;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 25px;  /* Added to make the button have rounded edges */
+    font-weight: bold;    /* Added for the button text to be bold */
+  }
+  
+  .signup-link {
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .sign {
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #000000, 0 0 1.5rem #0a0a0a,
+        -0.2rem 0.1rem 1rem #000000, 0.2rem 0.1rem 1rem #080808,
+        0 -0.5rem 2rem #000000, 0 0.5rem 3rem #000000;
+    animation: shine 2s forwards, flicker 3s infinite;
+  }
+  .return-home {
+    display: block; /* Makes the link behave like a block element */
+    color: #ffffff; /* Changes the text color */
+    text-decoration: none; /* Removes the underline */
+    text-align: center; /* Centers the text */
+    transition: color 0.3s ease; /* Adds a smooth transition effect for color change */
+  }
+  
+  .return-home:hover {
+    color: #000000; /* Changes the color when hovered */
+    text-decoration: underline; /* Adds an underline on hover */
+  }
+  
+  @keyframes blink {
+    0%, 22%, 36%, 75% {
+        color: #ffe6ff;
+        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #000000,
+            -0.2rem 0.1rem 1rem #d4d4d4, 0.2rem 0.1rem 1rem #929292,
+            0 -0.5rem 2rem #808080, 0 0.5rem 3rem #4b4b4b;
+    }
+    28%, 33% {
+        color: #111111;
+        text-shadow: none;
+    }
+    82%, 97% {
+        color: #9c9c9c;
+        text-shadow: none;
+    }
+  }
+  
+  .flicker {
+    animation: shine 2s forwards, blink 3s 2s infinite;
+  }
+  
+  .fast-flicker {
+    animation: shine 2s forwards, blink 10s 1s infinite;
+  }
+  
+  @keyframes shine {
+    0% {
+        color: #6b1839;
+        text-shadow: none;
+    }
+    100% {
+        color: #ffe6ff;
+        text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #000000,
+            -0.2rem 0.1rem 1rem #000000, 0.2rem 0.1rem 1rem #000000,
+            0 -0.5rem 2rem #000000, 0 0.5rem 3rem #000000;
+    }
+  }
+  
+  @keyframes flicker {
+    from {
+        opacity: 1;
+    }
+  
+    4% {
+        opacity: 0.9;
+    }
+  
+    6% {
+        opacity: 0.85;
+    }
+  
+    8% {
+        opacity: 0.95;
+    }
+  
+    10% {
+        opacity: 0.9;
+    }
+  
+    11% {
+        opacity: 0.922;
+    }
+  
+    12% {
+        opacity: 0.9;
+    }
+  
+    14% {
+        opacity: 0.95;
+    }
+  
+    16% {
+        opacity: 0.98;
+    }
+  
+    17% {
+        opacity: 0.9;
+    }
+  
+    19% {
+        opacity: 0.93;
+    }
+  
+    20% {
+        opacity: 0.99;
+    }
+  
+    24% {
+        opacity: 1;
+    }
+  
+    26% {
+        opacity: 0.94;
+    }
+  
+    28% {
+        opacity: 0.98;
+    }
+  
+    37% {
+        opacity: 0.93;
+    }
+  
+    38% {
+        opacity: 0.5;
+    }
+  
+    39% {
+        opacity: 0.96;
+    }
+  
+    42% {
+        opacity: 1;
+    }
+  
+    44% {
+        opacity: 0.97;
+    }
+  
+    46% {
+        opacity: 0.94;
+    }
+  
+    56% {
+        opacity: 0.9;
+    }
+  
+    58% {
+        opacity: 0.9;
+    }
+  
+    60% {
+        opacity: 0.99;
+    }
+  }
+  

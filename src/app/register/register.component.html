@@ -1,0 +1,38 @@
+<div class="login-background">
+  <div class="login-container">
+    <div class="sign">
+      <span class="fast-flicker">|</span>REGISTER<span class="flicker">|</span>
+    </div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div *ngIf="submitted && registerForm.invalid" class="alert alert-danger">
+        <div *ngIf="f['firstname'].errors?.['required']">First Name is required</div>
+        <div *ngIf="f['lastname'].errors?.['required']">Last Name is required</div>
+        <div *ngIf="f['email'].errors?.['required']">Email is required</div>
+        <div *ngIf="f['email'].errors?.['email']">Email must be valid</div>
+        <div *ngIf="f['password'].errors?.['required']">Password is required</div>
+        <div *ngIf="f['password'].errors?.['minlength']">Password must be at least 6 characters</div>
+      </div>
+      <div class="input-container">
+        <input id="firstname" formControlName="firstname" />
+        <label for="firstname">First Name</label>
+      </div>
+      <div class="input-container">
+        <input id="lastname" formControlName="lastname" />
+        <label for="lastname">Last Name</label>
+      </div>
+      <div class="input-container">
+        <input id="email" formControlName="email" type="email" />
+        <label for="email">Email address</label>
+      </div>
+      <div class="input-container">
+        <input id="password" formControlName="password" type="password" />
+        <label for="password">Password</label>
+      </div>
+      <button type="submit">Register</button>
+      <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+      <p class="signup-link">Already have an account? <a routerLink="/login">Sign In</a></p>
+      <p>Or</p>
+      <a class="return-home" routerLink="/home">Return to home page.</a>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<h2>Product List - {{ selectedCategory }}</h2>
+
+<div class="category-select">
+  <label for="category">Select Category:</label>
+  <select id="category" [(ngModel)]="selectedCategory" (change)="fetchProducts()">
+    <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+  </select>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Stock</th>
+      <th>Image</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.description }}</td>
+      <td>{{ product.stock }}</td>
+      <td><img [src]="'http://localhost:3000' + product.imageUrl" alt="{{ product.name }}" class="product-image"></td>
+      <td>
+        <button (click)="editProduct(product)">Edit</button>
+        <button (click)="deleteProduct(product._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>{{ editMode ? 'Edit' : 'Add' }} Product</h2>
+<form (ngSubmit)="addProduct()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" [(ngModel)]="newProduct.name" name="name" required>
+  </div>
+  <div>
+    <label for="price">Price:</label>
+    <input type="number" id="price" [(ngModel)]="newProduct.price" name="price" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="newProduct.description" name="description" required></textarea>
+  </div>
+  <div>
+    <label for="stock">Stock:</label>
+    <input type="number" id="stock" [(ngModel)]="newProduct.stock" name="stock" required>
+  </div>
+  <div>
+    <label for="category">Category:</label>
+    <select id="category" [(ngModel)]="newProduct.category" name="category" required>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="image">Image:</label>
+    <input type="file" id="image" (change)="onImageSelected($event)">
+  </div>
+  <button type="submit">{{ editMode ? 'Update' : 'Add' }} Product</button>
+</form>

@@ -1,0 +1,573 @@
+
+/* Featured section styles */
+.featured {
+  background-color: #0d1824;
+  padding: 50px 0;
+}
+
+.featured .container {
+  max-width: 3100px;
+  max-height: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -51px;
+  margin-bottom: -25px;
+  display: flex;
+  background-color: #0d1824;
+}
+
+.featured .image-with-text {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.featured .image {
+  flex: 100;
+  align-items: left;
+}
+
+.featured .image img {
+  width: 100%;
+  height: 50%;
+}
+
+.featured .text {
+  flex: 50;
+  padding: 0 30px;
+  color: #000000;
+  display: block;
+}
+
+.featured .heading {
+  font-size: 35px;
+  color: #ecc879;
+  margin-bottom: 20px;
+  
+}
+
+.featured .description {
+  font-size: 25px;
+  color:#f4c542 ;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.featured .button {
+  background-color: #ecc879; /* Black background color */
+  color: #000000; /* White text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  display: block; /* Display as block */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Optional: smooth corners */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.featured .button:hover {
+  background-color: #f4c542;
+}
+
+/* Products section styles */
+
+
+.products .container {
+  max-width: 1850px;
+  margin: auto;
+  align-items: center;
+  padding: 20px;
+  background-color: #0d1824;
+}
+
+.products .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 40px;
+}
+
+.products .product-item {
+  background-color: #000000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.products .product-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.products .product-item img {
+  width: 100%;
+  height: 600px; /* Fixed height for uniformity */
+  object-fit: cover; /* Maintains aspect ratio and centers image */
+  margin-bottom: 15px;
+}
+
+.products .product-item h2 {
+  font-size: 28px;
+  color: #f4c542;
+  margin-bottom: 10px;
+}
+
+.products .product-item button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none; 
+  font-size: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.products .product-item button:hover {
+  background-color: #f4c542;
+}
+.products .allbutton button {
+  background-color: #ecc879; /* Black background color */
+  color: #000000; /* White text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  display: block; /* Display as block */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Optional: smooth corners */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+/* Courses styles */
+/* Featured1 section styles */
+.featured1 {
+  background-color: #151515;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+.featured1 .container1 {
+  background-color: #000000;
+}
+
+.featured1 .image-with-text1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse; /* Places the image on the right and text on the left */
+}
+
+.featured1 .image1 {
+  flex: 1.4;
+  display: flex;
+  justify-content: center;
+}
+
+.featured1 .image1 img {
+  max-width: 100%;
+  height: 500px;
+  object-fit: cover; /* Ensures the image covers the height without distortion */
+}
+
+.featured1 .text1 {
+  flex: 1.5;
+  color: #ffffff;
+  padding: 0 30px;
+  display: block;
+}
+
+.featured1 .heading1 {
+  font-size: 24px;
+  color: #fbfbfb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.featured1 .description1 {
+  font-size: 25px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.featured1 .button1 {
+  background-color: #000000; /* Black background color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  display: block; /* Display as block */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Optional: smooth corners */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.featured1 .button1:hover {
+  background-color: #0056b3;
+
+
+
+  
+  /*section3*/
+}
+.featured2 {
+  background-color: #151515;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+}
+.featured2 .container1 {
+  max-width: 1900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+}
+
+.featured2 .image-with-text1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 20px;
+  
+
+}
+
+.featured2 .video1 {
+  flex:2;
+  display: flex;
+}
+
+.featured2 .video1 video {
+  max-width: 100%;
+  height: 600px;
+}
+.featured2 .text1 {
+  flex: 1.5;
+  color: #ffffff;
+  display: block;
+}
+
+.featured2 .heading1 {
+  font-size: 24px;
+  color: #fbfbfb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.featured2 .description1 {
+  font-size: 25px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.featured2 .button1 {
+  background-color: #000000; /* Black background color */
+  color: #ffffff; /* White text color */
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  text-decoration: none;
+  display: block; /* Display as block */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Optional: smooth corners */
+  margin: 0 auto; /* Center the button horizontally */
+}
+
+.featured2 .button1:hover {
+  background-color: #0056b3;
+}
+/*SLIDER*/
+
+
+.container3 {
+  max-width: 1800px;
+  padding: 20px;
+  background-color: transparent;
+  margin-left: 31px;
+}
+
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #0056b3;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+  background-color: #0056b3;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px;
+  display: none;
+}
+
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+
+.slider-wrapper .image-list {
+  overflow-x: auto;
+  grid-template-columns: repeat(9, 1fr); /* Adjust the number of columns to fit larger images */
+  display: grid;
+  gap: 40px;
+
+
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-wrapper .image-list .image-item {
+  width: 350px; /* Increased width */
+  height: 450px; /* Increased height */
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+  
+}
+
+.slider-wrapper .image-list .image-item:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.container3 .button2 {
+  background-color: #0056b3; /* White background color */
+  color: #ffffff; /* Black text color */
+  border: 1px solid #000000; /* Border to make it look like a button */
+  padding: 8px 24px;
+  font-size: 20px; /* Increase the font size */
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Smooth corners */
+  margin: 20px auto 0; /* Center the button horizontally with margin */
+margin-left: 25px;}
+
+
+.container3 .button2:hover {
+  background-color: #0056b3; /* Slightly lighter black on hover */
+}
+
+
+
+
+
+
+/* Styles for mobile and tablets */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
+.footer-body {
+  background-color: black; /* Background color of the footer */
+  color: #fff;
+  padding: 30px 0;
+  text-align: center;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3); /* Adding a box shadow to the footer */
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%; /* Ensure full width */
+  
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.about h3{
+  font-size: 25px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.links h3,
+.subscribe h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.social {
+  margin-top: 10px;
+}
+
+.social i {
+  font-size: 1.5em;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.column ul li {
+  margin-bottom: 8px;
+}
+
+.column ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.column ul li a:hover {
+  text-decoration: underline;
+}
+
+.subscribe input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.subscribe button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #555;
+  color: #fff;
+  cursor: pointer;
+}
+
+.subscribe button:hover {
+  background-color: #777;
+}
+
+.footer-menu {
+  margin-bottom: 20px;
+}
+
+.footer-menu a {
+  margin: 0 10px;
+}
+  /* Popup form styles */
+  /* Styles for the popup form */
+/* Popup form styles */
+/* Popup container styles */
+/* Popup container styles */
+/* Popup container styles */
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0s linear 0.3s;
+}
+
+.popup-container.show-popup {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-out, visibility 0s linear 0s;
+}
+
+.popup {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px; /* Adjusted padding for better spacing */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%) scale(0.95); /* Adjusted translateY for drop-down effect */
+  transition: transform 0.3s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.popup-container.show-popup .popup {
+  transform: translateY(-8%) scale(1); /* Return to normal scale when popup is visible */
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+}
+/* go to sign up buuton*/
+.allbutton3 {
+  text-align: center; /* Center align the button */
+  margin-top: 20px; /* Add top margin */
+}
+
+.allbutton3 button {
+  padding: 10px 20px; /* Add padding around the text */
+  background-color: #007bff; /* Blue background color */
+  color: #fff; /* White text color */
+  border: none; /* Remove default border */
+  cursor: pointer; /* Show pointer cursor on hover */
+  font-size: 16px; /* Font size */
+}
+
+.allbutton3 button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}

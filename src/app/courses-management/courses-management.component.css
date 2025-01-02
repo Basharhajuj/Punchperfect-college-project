@@ -1,0 +1,99 @@
+
+.course-management, .add-course {
+  margin-bottom: 20px;
+}
+
+.stage-select {
+  margin-bottom: 10px;
+}
+
+.stage-select label {
+  margin-right: 10px;
+  color: #f4c542; /* Lighter gold color for labels */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: #131a2a; /* Dark background for table */
+  color: #fff; /* White text for table */
+}
+
+table th, table td {
+  border: 1px solid #333; /* Darker border color */
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #0d1824; /* Darker header background to match the theme */
+  color: #f4c542; /* Lighter gold color for table headers */
+}
+
+table td {
+  max-width: 200px; /* Adjust the width as necessary */
+  word-wrap: break-word;
+  overflow-y: auto;
+  color: #fff; /* Ensure text is white */
+}
+
+table td::-webkit-scrollbar {
+  width: 8px;
+}
+
+table td::-webkit-scrollbar-track {
+  background: #1a1a1a; /* Darker background for scrollbar track */
+}
+
+table td::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 10px; 
+  border: 2px solid #1a1a1a; /* Darker border for scrollbar thumb */
+}
+
+table td::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #f4c542; /* Lighter gold color for form labels */
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #1a1a1a; /* Dark background for form inputs */
+  color: #fff; /* White text for form inputs */
+  border: 1px solid #f4c542; /* Lighter gold border for form inputs */
+  border-radius: 5px;
+}
+
+form button {
+  background-color: #ecc879; /* Gold color for buttons */
+  color: #0d1824; /* Dark text color for contrast */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #d4a531; /* Darker gold on hover */
+}
+
+form button[type="button"] {
+  background-color: #444; /* Darker background for cancel button */
+  color: #fff;
+}
+
+form button[type="button"]:hover {
+  background-color: #333; /* Slightly darker hover state for cancel button */
+}

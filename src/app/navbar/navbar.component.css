@@ -1,0 +1,142 @@
+.navbar {
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #09121b;
+  color: white;
+  padding: 0 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  color: #ecc870;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.center-nav {
+  justify-content: center;
+}
+
+.nav-item {
+  margin-left: 1.5rem;
+}
+
+.nav-link {
+  color: #ecc870;
+  text-decoration: none;
+  padding-right: 40px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link.active {
+  position: relative;
+  color: #ecc870;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 2px;
+  margin-left: -17px;
+  background-color: #ecc870;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  color: #ecc870;
+  margin-right: 50px; /* Adjust this value to bring the icons closer */
+}
+
+.user-section .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.user-section .profile-icon {
+  font-size: 1.4rem;
+  color: #ecc870;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #0d1824;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.user-section .profile-icon:hover {
+  background-color: #162739;
+  color: #ffffff;
+}
+
+.user-section .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #0d1824;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.user-section .dropdown .dropdown-content a {
+  color: #ecc870;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.user-section .dropdown .dropdown-content a:hover {
+  background-color: #162739;
+}
+
+.user-section .dropdown .dropdown-content.show {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}

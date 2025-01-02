@@ -1,0 +1,38 @@
+<head>
+<title>Font Awesome Icons</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div class="cart-container">
+  <h2>Your cart</h2>
+  <div class="cart-header">
+    <div class="cart-header-item">Product</div>
+    <div class="cart-header-item">Quantity</div>
+    <div class="cart-header-item">Total</div>
+  </div>
+  <div *ngFor="let item of cartItems" class="cart-item">
+    <div class="product-info">
+      <img [src]="'http://localhost:3000' + item.productId.imageUrl" alt="{{ item.productId.name }}" class="product-image">
+      <div class="product-details">
+        <h4>{{ item.productId.name }}</h4>
+        <p>{{ item.productId.category }}</p>
+        <p>{{ item.productId.price | currency }}</p>
+      </div>
+    </div>
+    <div class="quantity-info">
+      <button (click)="decreaseQuantity(item.productId._id)"><i class="fa fa-minus"></i></button>
+      <input type="number" [(ngModel)]="item.quantity" min="1" [readonly]="true">
+      <button (click)="increaseQuantity(item.productId._id)"><i class="fa fa-plus"></i></button>
+      <button class="remove-item" (click)="removeItem(item.productId._id)"><i class="fa fa-trash-o" style="font-size:20px;color:red"></i></button>
+    </div>
+    <div class="total-info">
+      <p>{{ item.productId.price * item.quantity | currency }}</p>
+    </div>
+  </div>
+  <div class="cart-summary">
+    <p>Estimated total</p>  
+    <p>{{ getTotal() | currency }}</p>
+  </div>
+  <button (click)="continueShopping()" class="continue-shopping">Continue shopping</button>
+  <button class="checkout">Check out</button>
+</div>

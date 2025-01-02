@@ -1,0 +1,50 @@
+<div class="products-container">
+  <div class="header-section">
+    <h1 class="main-title">Explore Our Products</h1>
+    <p class="motivational-quote">"Equip yourself with the best to bring out the best in you."</p>
+  </div>
+
+  <div class="category-select">
+    <label for="category">Select Category:</label>
+    <select id="category" [(ngModel)]="selectedCategory" (change)="fetchProducts()">
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+
+  <div class="card-container">
+    <div class="card" *ngFor="let product of products">
+      <img [src]="'http://localhost:3000' + product.imageUrl" alt="{{ product.name }}" class="card-image">
+      <div class="card-content">
+        <h4>{{ product.name }}</h4>
+        <p class="product-category">{{ product.category }}</p>
+        <p class="product-price">{{ product.price | currency }}</p>
+        <button class="shop-now-button" (click)="openModal(product)">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for the Buy Now popup -->
+  <div class="modal" *ngIf="showModal">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <div class="modal-body">
+        <img [src]="'http://localhost:3000' + selectedProduct.imageUrl" alt="{{ selectedProduct.name }}" class="modal-image">
+        <div class="modal-details">
+          <h4>{{ selectedProduct.name }}</h4>
+          <p>{{ selectedProduct.category }}</p>
+          <p>{{ selectedProduct.price | currency }}</p>
+          <div class="quantity-container">
+            <label for="quantity">Quantity</label>
+            <div class="quantity-selector">
+              <button (click)="decreaseQuantity()">-</button>
+              <input type="number" id="quantity" [(ngModel)]="quantity" min="1" value="1">
+              <button (click)="increaseQuantity()">+</button>
+            </div>
+          </div>
+          <button class="add-to-cart-button" (click)="addToCart()">Add to cart</button>
+          <button class="buy-now-button">Buy with PayPal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

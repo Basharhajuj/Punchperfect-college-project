@@ -1,0 +1,61 @@
+<div class="admin-news-container">
+    <div class="header-section">
+        <h2>Header Section</h2>
+        <div *ngIf="header" class="edit-form">
+          <form [formGroup]="headerForm" (ngSubmit)="saveHeader()">
+            <label for="title">Headline Title:</label>
+            <input id="title" formControlName="title" />
+            <label for="description">Description:</label>
+            <textarea id="description" formControlName="description"></textarea>
+            <label for="imageUrl">Image URL:</label>
+            <input id="imageUrl" formControlName="imageUrl" />
+            <button type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+  
+    <div class="articles-section">
+      <h2>Articles Section</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Card Link</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let articleForm of articleForms; let i = index" [formGroup]="articleForm">
+            <td><img [src]="articleForm.get('imageUrl')?.value" alt="Article Image" width="100"></td>
+            <td>{{ articleForm.get('title')?.value }}</td>
+            <td>{{ articleForm.get('description')?.value }}</td>
+            <td><a [href]="articleForm.get('cardLink')?.value" target="_blank">Link</a></td>
+            <td>
+              <button (click)="editArticle(i)">Edit</button>
+              <div *ngIf="isEditingArticle === i" class="edit-form">
+                <form [formGroup]="articleForm" (ngSubmit)="saveArticle(i)">
+                  <label for="imageUrl-{{i}}">Image URL:</label>
+                  <input id="imageUrl-{{i}}" formControlName="imageUrl" />
+                  <label for="title-{{i}}">Title:</label>
+                  <input id="title-{{i}}" formControlName="title" />
+                  <label for="description-{{i}}">Description:</label>
+                  <textarea id="description-{{i}}" formControlName="description"></textarea>
+                  <label for="cardLink-{{i}}">Card Link:</label>
+                  <input id="cardLink-{{i}}" formControlName="cardLink" />
+                  <button type="submit">Save</button>
+                  <button type="button" (click)="cancelEditArticle(i)">Cancel</button>
+                </form>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Success/Error message section -->
+    <div *ngIf="message" class="message">
+      {{ message }}
+    </div>
+  </div>

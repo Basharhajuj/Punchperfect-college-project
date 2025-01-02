@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+h1,
+h2,
+h3 {
+  font-family: "Quicksand", sans-serif;
+}
+
+.news-container {
+  padding-bottom: 100px; /* Add padding to the bottom to ensure content does not overlap with the footer */
+  background-color: #0d1824; /* Match background color with products page */
+  color: #fff; /* Set default text color to white */
+}
+
+.container {
+  max-width: 2000px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+img {
+  width: 100%;
+  border-radius: 8px; /* Add rounded corners to images for consistency */
+}
+
+.sports-category,
+.entertainment-category,
+.technology-category {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 2px 20px;
+  border-radius: 50px;
+  color: #0d1824; /* Dark text color to contrast with the background */
+  margin: 0.5rem 0rem;
+}
+
+.sports-category {
+  background-color: #ecc879; /* Gold background color */
+}
+
+.entertainment-category {
+  background-color: #f4c542; /* Lighter gold background color */
+}
+
+.technology-category {
+  background-color: #d4a531; /* Darker gold background color */
+}
+
+/* =====
+SHOWCASE
+===== */
+
+.showcase {
+  position: relative;
+  color: white;
+  height: 80vh; /* Adjusted height */
+  background-image: url('https://wallpapercave.com/wp/wp4792971.jpg');
+  background-size: cover;
+  background-position: center top; /* Adjusted position */
+  height: 700px; /* Height for fallback */
+  border-radius: 8px; /* Add rounded corners to the showcase */
+}
+
+.showcase::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker overlay to match the page theme */
+  border-radius: 8px; /* Ensure overlay follows the rounded corners */
+}
+
+.showcase .container {
+  height: inherit;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase .text-content {
+  position: relative;
+  font-size: 25px; /* Corrected font size */
+  line-height: 1.2; /* Adjusted line height */
+  color: #ecc879; /* Gold color for the text */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.showcase .text-content h1 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin: 30px 0; /* Adjusted margin */
+  letter-spacing: 1px;
+}
+
+.showcase .text-content p:nth-child(3) {
+  text-align: justify;
+  color: #f4c542; /* Lighter gold color for the description */
+}
+
+/* =====
+ARTICLES
+===== */
+
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.articles > a:nth-child(1),
+.articles > a:last-child {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  grid-column: 1 / span 2;
+  align-items: center;
+}
+
+.articles > a:last-child {
+  grid-column: 2 / span 2;
+}
+
+.card {
+  background-color: #131a2a; /* Dark background color for the cards */
+  padding: 1rem;
+  text-decoration: none;
+  color: #ecc879; /* Gold color for the text */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+  border: 2px solid #0d1824; /* Darker border to frame the card */
+  border-radius: 8px; /* Add rounded corners */
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+  border-color: #d4a531; /* Darker gold border on hover */
+}
+
+.card article:hover {
+  color: #f4c542; /* Lighter gold text color on hover */
+}
+
+/* =======
+MEDIA QUERIES
+======= */
+
+@media (max-width: 900px) {
+  .showcase .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .showcase {
+    height: 80vh;
+    text-align: center;
+  }
+
+  .showcase .text-content p:nth-child(3) {
+    text-align: center;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}
+/* Popup container and general styles remain unchanged */
+
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-out, visibility 0s linear 0.3s;
+}
+
+.popup-container.show-popup {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-out, visibility 0s linear 0s;
+}
+
+.popup {
+  background-color: #131a2a; /* Dark background for the modal content to match the page */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px; /* Optional: Set a max-width for better control */
+  color: #ecc879; /* Gold color for the text */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; /* Center-align text */
+  position: relative; /* Added to position the close button */
+}
+
+.popup img {
+  width: auto; /* Make the image size adjust to its container */
+  max-width: 100%; /* Ensure the image does not exceed the container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 15px; /* Add space between the image and the text */
+}
+
+.popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; /* Adjusted to place it closer to the top edge */
+  right: 10px; /* Adjusted to place it closer to the right edge */
+  font-size: 24px;
+  color: #555;
+  cursor: pointer;
+  background: transparent; /* Ensure the background is transparent */
+  border: none; /* Remove border if any */
+  padding: 0;
+}
+
+/* New styles for the view products button */
+
+.view-products-btn {
+  background-color: #ecc879; /* Gold color for the button */
+  color: #131a2a; /* Dark color for the text */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 20px; /* Padding around the text */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-products-btn:hover {
+  background-color: #d4b746; /* Slightly darker gold on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.view-products-btn:focus {
+  outline: none; /* Remove default focus outline */
+}

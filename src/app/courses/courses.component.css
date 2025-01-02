@@ -1,0 +1,214 @@
+
+  .courses-container {
+    padding: 2rem;
+    background-color: #0d1824
+    ;
+  }
+
+  .stage-section {
+    margin-bottom: 2rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: #131a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 2rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ecc879;
+    text-align: left; 
+    position: relative;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column; /* Ensure content stacks properly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-image {
+  width: 100%; /* Image should take up the full width of its container */
+  height: 200px; /* Set a consistent height for the images */
+  object-fit: cover; /* Ensure the image covers the container without distortion */
+}
+  .card-image-container {
+    position: relative;
+    width: 100%; /* Ensure image container takes full width */
+    overflow: hidden;
+  }
+  .card-image:hover {
+    transform: translateY(5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 2);
+  }
+
+  .card-content {
+    padding: 1rem;
+    background-color: #162739fe;
+    flex: 1; /* Ensure content takes remaining space */
+}
+
+
+  .card-content h4 {
+    margin-top: 0;
+  }
+
+  .card-content p {
+    margin: 0.5rem 0;
+    color: #ffffff;
+  }
+
+  .card-content a {
+    background-color: #ecc870;
+    color: #131a2a;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.card-content a:hover {
+  background-color: #d4be3d;
+}
+
+  .card-progress {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    color: #f4e04d;
+  }
+
+  .card-progress span {
+    display: block;
+    font-size: 0.8rem;
+  }
+
+  .card-progress-bar {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 100%;
+    height: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 0.2rem;
+  }
+
+  .card-progress-bar-fill {
+    height: 100%;
+    background-color: #f4e04d;
+  }
+  .stage-progress {
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    width: 50%;
+  }
+  
+  .stage-progress-bar {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+   align-content: center;
+  }
+  
+  .stage-progress-bar-fill {
+    height: 100%;
+    background-color: #f4e04d; /* Gold color for the progress fill */
+    border-radius: 5px;
+  }
+  
+  .stage-percentage {
+    font-size: 1rem;
+    color: #ecc879;
+  } 
+  
+  .locked {
+    position: relative;
+    filter: grayscale(100%); /* Make the image grayscale */
+    cursor: not-allowed;
+  }
+  .lock-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    color: #f00;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 50%;
+}
+  .locked::after {
+    content: '\f023'; /* Font Awesome lock icon */
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: rgba(255, 0, 0, 0.7);
+  }
+  .locked-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    pointer-events: none; /* Prevent interaction */
+    z-index: 10;
+  }.page-header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #0d1824;
+    color: #ecc879;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Use a suitable font */
+  }
+  
+  .motivational-quote {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    font-style: italic;
+    font-family: 'Open Sans', sans-serif; /* Use a clean, readable font */
+    color: #f4e04d;
+  }
+  .stage-title {
+    font-size: 2rem;
+    color: #ecc879;
+    background-color: #09121b;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Montserrat', sans-serif; /* Match the page header font */
+    text-transform: uppercase;
+  }

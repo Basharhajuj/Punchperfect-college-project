@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+<div class="profile-container">
+  <div class="profile-card">
+    <div class="profile-header">
+      <div class="profile-picture-container">
+        <img *ngIf="user.profilePicture" [src]="user.profilePicture" class="profile-picture" alt="Profile Picture">
+        <img *ngIf="!user.profilePicture" src="assets/profile.png" class="profile-picture" alt="Default Profile Picture">
+        <button class="edit-icon profile-picture-edit" (click)="triggerFileInput()">
+          <i class='fas fa-pen'></i>
+        </button>
+        <input type="file" id="fileInput" style="display:none" (change)="onFileSelected($event)">
+      </div>
+      <div class="user-info">
+        <i class='fas fa-chess-pawn' style="color: #ecc870;"></i>
+        <h2>{{ user.firstname }}</h2>
+      </div>
+    </div>
+    <div class="account-info">
+      <h3>Account Information</h3>
+      <table>
+        <tr>
+          <td><label>Email Address:</label></td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button class="edit-icon" (click)="showChangePasswordModal()">
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Password:</label></td>
+          <td>********</td>
+          <td>
+            <button class="edit-icon" (click)="showChangePasswordModal()">
+              <i class='fas fa-pen' style='color: #ecc870;'></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td><label>Skill Level:</label></td>
+          <td>{{ user.skillLevel }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Change Password Modal -->
+  <div class="modal" tabindex="-1" role="dialog" [ngClass]="{'show': isChangePasswordModalVisible}" (click)="closeChangePasswordModal()">
+    <div class="modal-dialog" role="document" (click)="$event.stopPropagation()">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Change Password</h5>
+          <button type="button" class="close" (click)="closeChangePasswordModal()">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form (ngSubmit)="onChangePassword()">
+            <div class="form-group">
+              <label for="oldPassword">Old Password</label>
+              <input type="password" id="oldPassword" [(ngModel)]="oldPassword" name="oldPassword" required>
+            </div>
+            <div class="form-group">
+              <label for="newPassword">New Password</label>
+              <input type="password" id="newPassword" [(ngModel)]="newPassword" name="newPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Change Password</button>
+            <button type="button" class="btn btn-secondary" (click)="closeChangePasswordModal()">Cancel</button>
+          </form>
+          <div *ngIf="passwordChangeMessage" class="message">{{ passwordChangeMessage }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

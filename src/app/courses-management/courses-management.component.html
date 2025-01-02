@@ -1,0 +1,69 @@
+<body>
+<h2>Course List - {{ selectedStage }}</h2>
+
+<div class="stage-select">
+  <label for="stage">Select Stage:</label>
+  <select id="stage" [(ngModel)]="selectedStage" (change)="onStageChange()">
+    <option *ngFor="let stage of stages" [value]="stage">{{ stage }}</option>
+  </select>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Video</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let course of courses">
+      <td>{{ course.title }}</td>
+      <td>{{ course.description }}</td>
+      <td>{{ course.category }}</td>
+      <td>
+        <video width="100" controls>
+          <source [src]="course.videoUrl" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </td>
+      <td>
+        <button (click)="editCourse(course)">Edit</button>
+        <button (click)="deleteCourse(course._id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>{{ isEditing ? 'Edit Course' : 'Add New Course' }}</h2>
+<form (ngSubmit)="isEditing ? updateCourse() : addCourse()">
+  <div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" [(ngModel)]="newCourse.title" name="title" required>
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="newCourse.description" name="description" required></textarea>
+  </div>
+  <div>
+    <label for="stage">Stage:</label>
+    <select id="stage" [(ngModel)]="newCourse.stage" name="stage" (change)="onStageChange()" required>
+      <option *ngFor="let stage of stages" [value]="stage">{{ stage }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="category">Category:</label>
+    <select id="category" [(ngModel)]="newCourse.category" name="category" required>
+      <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+    </select>
+  </div>
+  <div>
+    <label for="video">Video:</label>
+    <input type="file" id="video" (change)="onVideoSelected($event)">
+  </div>
+  <button type="submit">{{ isEditing ? 'Update Course' : 'Add Course' }}</button>
+  <button type="button" (click)="resetForm()">Cancel</button>
+</form>
+</body>

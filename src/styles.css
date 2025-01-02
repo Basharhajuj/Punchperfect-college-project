@@ -1,0 +1,31 @@
+/* src/styles.css or src/app/app.component.css */
+body, app-root {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .main-content {
+    padding-top: 60px; /* Ensure this matches the navbar height */
+    min-height: calc(100vh - 60px); /* Adjust for footer height if needed */
+  }
+  
+  .full-height {
+    padding-top: 0; /* Remove padding when navbar is hidden */
+    min-height: 100vh; /* Ensure full height when navbar is hidden */
+  }
+  /* Add this to your global styles if needed */
+app-footer {
+    position: relative;
+    width: 100%;
+    bottom: 0;
+  }
+  

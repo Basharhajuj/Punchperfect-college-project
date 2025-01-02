@@ -1,0 +1,37 @@
+<div class="courses-container">
+  <div class="page-header">
+    <h1 class="page-title">PunchPerfect Courses</h1>
+    <p class="motivational-quote">"The only limit to your impact is your imagination and commitment."</p>
+  </div>
+
+  <div class="stage-section" *ngFor="let stage of stages">
+    <h3 class="stage-title">{{ stage.name }}</h3>
+    <div class="stage-progress">
+      <div class="stage-progress-bar">
+        <div class="stage-progress-bar-fill" [style.width.%]="getStageCompletionPercentage(stage)"></div>
+      </div>
+      <span class="stage-percentage">{{ getStageCompletionPercentage(stage) }}% complete</span>
+    </div>
+    <div class="card-container">
+      <div class="card" *ngFor="let category of stage.categories">
+        <div class="card-image-container">
+          <img src="{{ category.image }}" alt="{{ category.name }}" class="card-image">
+          <div class="lock-icon" *ngIf="isLocked(stage.name)">
+            <i class="fa fa-lock"></i>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-progress">
+            <span>{{ getCompletionPercentage(category) }} complete</span>
+            <div class="card-progress-bar">
+              <div class="card-progress-bar-fill" [style.width.%]="getCompletionPercentageAsNumber(category)"></div>
+            </div>
+          </div>
+          <h4>{{ category.name }}</h4>
+          <p>{{ category.description }}</p>
+          <a *ngIf="!isLocked(stage.name)" (click)="viewCategory(stage.name, category.name)">View Courses <i class="fas fa-angle-double-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

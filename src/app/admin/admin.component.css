@@ -1,0 +1,50 @@
+/* src/app/admin/admin.component.css */
+.admin-dashboard {
+  font-family: Arial, sans-serif;
+}
+
+.admin-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 200px;
+  padding-top: 20px;
+}
+
+.sidebar a {
+  display: block;
+  color: #ecc870;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #0d1824;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.expand-collapse-button {
+  background-color: #0d1824;
+  color: #ecc870;
+  border: 1px solid #ecc870;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.expand-collapse-button:hover {
+  background-color: #ecc870;
+  color: #0d1824;
+}
+
+.main-content {
+  margin-left: 210px;
+  padding: 20px;
+}

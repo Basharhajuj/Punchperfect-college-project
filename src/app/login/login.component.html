@@ -1,0 +1,27 @@
+<!-- login.component.html -->
+<div class="login-background">
+  <div class="login-container">
+    <div class="sign">
+      <span class="fast-flicker">|</span>SIGN <span class="flicker">IN</span>|
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div *ngIf="submitted && loginForm.invalid" class="alert alert-danger">
+        <div *ngIf="f['email'].errors?.['required']">Email is required</div>
+        <div *ngIf="f['email'].errors?.['email']">Email must be valid</div>
+        <div *ngIf="f['password'].errors?.['required']">Password is required</div>
+      </div>
+      <div class="input-container">
+        <input id="email" formControlName="email" type="email" />
+        <label for="email">Email address</label>
+      </div>
+      <div class="input-container">
+        <input id="password" formControlName="password" type="password" />
+        <label for="password">Password</label>
+      </div>
+      <a href="#" class="forgot-password">Forgot Password?</a>
+      <button type="submit">SIGN IN</button>
+      <div *ngIf="errorMessage" class="alert alert-danger">{{ errorMessage }}</div>
+      <p class="signup-link">Don't have an account? <a routerLink="/register">Sign UP</a></p>
+    </form>
+  </div>
+</div>

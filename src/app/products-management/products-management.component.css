@@ -1,0 +1,75 @@
+.product-management, .add-product {
+  margin-bottom: 20px;
+}
+
+.category-select {
+margin-bottom: 10px;
+}
+
+.category-select label {
+margin-right: 10px;
+color: #f4c542; /* Lighter gold color */
+}
+
+table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 20px;
+}
+
+table th, table td {
+border: 1px solid #333; /* Darker border color */
+padding: 8px;
+text-align: left;
+color: #fff; /* Text color to white */
+}
+
+table th {
+background-color: #131a2a; /* Dark background for table headers */
+}
+
+.product-image {
+width: 50px;
+height: 50px;
+object-fit: cover; /* Maintain aspect ratio of images */
+}
+
+form div {
+margin-bottom: 10px;
+}
+
+form label {
+display: block;
+margin-bottom: 5px;
+color: #f4c542; /* Lighter gold color */
+}
+
+form input, form select, form textarea {
+width: 100%;
+padding: 8px;
+box-sizing: border-box;
+background-color: #1a1a1a; /* Dark background for form fields */
+color: #fff; /* Text color to white */
+border: 1px solid #f4c542; /* Lighter gold border color */
+border-radius: 5px;
+}
+
+form button {
+background-color: #ecc879; /* Gold color for the button */
+color: #0d1824; /* Dark text color */
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+}
+
+form button:hover {
+background-color: #d4a531; /* Darker gold on hover */
+}
+
+h2 {
+color: #ecc879; /* Match header color with the products page */
+text-align: center;
+margin-bottom: 1.5rem;
+}
+

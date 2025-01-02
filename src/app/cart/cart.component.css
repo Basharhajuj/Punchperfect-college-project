@@ -1,0 +1,123 @@
+.cart-container {
+  padding: 2rem;
+  background-color: #0d1824; /* Match background color with the products page */
+  color: #fff; /* Set text color to white */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #ecc879; /* Match header color with the products page */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #f4c542; /* Lighter gold border color */
+}
+
+.cart-header-item {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  color: #f4c542; /* Lighter gold color for the headers */
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 1px solid #333; /* Darker border color for separation */
+}
+
+.product-info {
+  display: flex;
+  flex: 2;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 1rem;
+  border-radius: 5px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff; /* Ensure text color matches the theme */
+}
+
+.quantity-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.quantity-info button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f4c542; /* Gold color for the icons */
+  font-size: 1.2rem;
+}
+
+.quantity-info input {
+  width: 50px;
+  text-align: center;
+  margin: 0 0.5rem;
+  background-color: #1a1a1a; /* Darker input background */
+  color: #fff; /* Input text color */
+  border: 1px solid #f4c542; /* Lighter gold border */
+  border-radius: 5px;
+}
+
+.total-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+  color: #f4c542; /* Lighter gold color for the total */
+}
+
+.cart-summary {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-top: 1px solid #f4c542; /* Lighter gold border */
+  margin-top: 1rem;
+  color: #f4c542; /* Lighter gold color for the summary */
+}
+
+.continue-shopping {
+  background: none;
+  border: none;
+  color: #ecc879; /* Match continue shopping button with header color */
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkout {
+  background: #ecc879; /* Match checkout button with header color */
+  color: #0d1824; /* Set text color to match the background of the container */
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.checkout:hover {
+  background-color: #d4a531; /* Darker gold on hover */
+}

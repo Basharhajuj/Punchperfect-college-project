@@ -1,0 +1,263 @@
+/* Header section styles */
+.header-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0d1824;
+  color: #ecc879;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-title {
+  font-size: 2.5rem;
+  color: #ecc870; /* Gold color for the main title */
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+}
+
+.motivational-quote {
+  font-size: 1.2rem;
+  color: #f4c542; /* Lighter gold color for the quote */
+  font-style: italic;
+}
+
+/* Container styles */
+.products-container {
+  padding: 2rem;
+  background-color: #0d1824;
+  color: #fff;
+}
+
+/* Title styles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #f4c542; /* Gold color for the title */
+}
+
+/* Category select styles */
+.category-select {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.category-select label {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.category-select select {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+/* Card container styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.card {
+  background-color: #131a2a;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px; /* Set a fixed width for all cards */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.card-image {
+  width: 300px;   /* Fixed width */
+  height: 300px;  /* Fixed height */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+
+.card-image:hover {
+  transform: none; /* Disable the transform for debugging */
+  box-shadow: none; /* Disable shadow for debugging */
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h4 {
+  margin-bottom: 0.5rem;
+}
+
+.product-category,
+.product-price {
+  margin-bottom: 0.5rem;
+}
+
+.shop-now-button {
+  color: #f4c542; /* Gold color for the text */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  background-color: transparent;
+}
+
+.shop-now-button:hover,
+.shop-now-button:focus {
+  color: #d4a531; /* Darker gold on hover */
+  border-bottom: 2px solid #f4c542; /* Underline effect */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+
+/* Modal styles */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background for the modal overlay */
+}
+
+.modal-content {
+  background-color: #131a2a; /* Dark background for the modal content to match the page */
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  color: #ecc879; /* Gold color for the text */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Slightly darker shadow */
+}
+
+.close {
+  color: #ecc879; /* Gold color for the close button */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #d4a531; /* Darker gold on hover */
+  text-decoration: none;
+}
+
+.modal-body {
+  display: flex;
+  align-items: center;
+}
+
+.modal-image {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal-details {
+  padding-left: 20px;
+}
+
+.modal-details h4 {
+  margin-bottom: 1rem;
+  color: #ecc879; /* Gold color for the product name */
+}
+
+.modal-details p {
+  margin-bottom: 1rem;
+  color: #f4c542; /* Lighter gold for category and price */
+}
+
+.quantity-container {
+  margin-top: 1rem;
+}
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  background-color: #1a1a1a; /* Darker background for the quantity selector */
+  border-radius: 10px;
+  overflow: hidden;
+  width: fit-content;
+  padding: 5px;
+}
+
+.quantity-selector button {
+  background-color: #004182; /* Dark blue for the buttons */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 10px 0 0 10px;
+}
+
+.quantity-selector input {
+  text-align: center;
+  width: 50px;
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #0056b3;
+  color: white;
+}
+
+.quantity-selector button:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+.add-to-cart-button,
+.buy-now-button {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button {
+  background-color: #0056b3; /* Blue button background */
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.add-to-cart-button:hover {
+  background-color: #004182; /* Darker blue on hover */
+}
+
+.buy-now-button {
+  background-color: #ecc879; /* Gold button background */
+  color: #0d1824; /* Dark text color for contrast */
+}
+
+.buy-now-button:hover {
+  background-color: #d4a531; /* Darker gold on hover */
+}

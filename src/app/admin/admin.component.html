@@ -1,0 +1,18 @@
+<!-- src/app/admin/admin.component.html -->
+<div class="admin-dashboard">
+  <div class="admin-container">
+    <div class="sidebar">
+      <button class="expand-collapse-button" (click)="toggle()">
+        {{ isExpanded ? 'Collapse' : 'Expand' }}
+      </button>
+      <div *ngIf="isExpanded">
+        <a routerLink="/admin/products-management">Products Management</a>
+        <a routerLink="/admin/courses-management">Courses Management</a>
+        <a routerLink="/admin/news-management">News Management</a>
+      </div>
+    </div>
+    <div class="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

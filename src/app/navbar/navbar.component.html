@@ -1,0 +1,55 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a class="navbar-brand" routerLink="/">PunchPerfect</a>
+    <ul class="navbar-nav center-nav">
+      <ng-container *ngIf="authService.isLoggedIn(); else guestMenu">
+        <ng-container *ngIf="authService.currentUserValue?.role === 'admin'; else studentMenu">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/news" routerLinkActive="active">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/courses" routerLinkActive="active">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/admin" routerLinkActive="active">Admin</a>
+          </li>
+        </ng-container>
+        <ng-template #studentMenu>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/courses" routerLinkActive="active">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/news" routerLinkActive="active">News</a>
+          </li>
+        </ng-template>
+      </ng-container>
+      <ng-template #guestMenu>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register" routerLinkActive="active">Register</a>
+        </li>
+      </ng-template>
+    </ul>
+    <div class="user-section" *ngIf="authService.isLoggedIn()">
+      <a class="nav-link" routerLink="/cart" routerLinkActive="active"><i class='fas fa-shopping-cart'></i></a>
+      <div class="dropdown" (click)="toggleDropdown()">
+        <a class="profile-icon"><i class='far fa-user'></i></a>
+        <div class="dropdown-content" [class.show]="showDropdown">
+          <a (click)="navigateToProfile()">Edit Profile</a>
+          <a (click)="logout()">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
