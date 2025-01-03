@@ -17,6 +17,88 @@
   display: flex;
   background-color: #0d1824;
 }
+.collection {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  background-color: #0d1824;
+}
+
+.carousel-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px; 
+  color: #ffffff;
+  text-align: center;
+}
+
+.mySwiper {
+  width: 90%;
+  max-width: 1200px;
+  height: 500px; 
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.team-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  align-items: flex-end; 
+  justify-content: center;
+  transition: all 0.5s ease-in-out;
+  padding: 10px;
+}
+
+.card-overlay.blurred {
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.text-content {
+  color: white;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.card-overlay.blurred .text-content {
+  opacity: 1;
+}
+
+
+
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
 
 .featured .image-with-text {
   display: flex;
